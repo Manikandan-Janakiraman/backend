@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Day 2 - Assignment</title>
+</head>
+
+<body>
+<h2>Day 2 Assignment</h2>
+</body>
+
+<script>
+
+    // 1. Write three different functions add1, add2, and add3 that all do the same work (add two numbers) but use:
+
+    // Function Declaration
+    function add1(a, b) {
+        return a + b;
+    }
+    console.log(add1(2, 3));
+
+
+    // Function Expression
+    const add2 = function (a, b) {
+        return a + b;
+    }
+    console.log(add2(4, 5));
+
+    // Arrow Function
+    let add3 = (a, b) => a + b;
+    console.log(add3(6, 7));
+
+
+    // 2. Convert this function into an arrow function in three different valid ways (different arrow syntaxes):
+
+
+    let greets = (name) => {
+        return "Hello," + name;
+    }
+
+
+    let greetas = function (name) {
+        return "Hello," + name;
+    }
+
+    let greetss = (name) => "Hello" + name;
+
+
+    // 3. Write a function calculateBill that takes two parameters: amount and taxPercentage and returns the final bill amount.
+    // Then write the same logic using an arrow function.    
+
+    // function calculateBill(amount, taxPercentage) {
+    //     return totalamount;
+    // }
+
+    // const calculateBill = (amount, taxPercentage) => {
+    //     return totalamount;
+    // }
+
+
+
+
+    // 4. You have this object:
+
+    const user = {
+        name: "Ajay",
+        sayName: function () {
+            console.log(this);
+        },
+    };
+    user.sayName()
+
+    const users = {
+        name: "Ajays",
+        sayNameArrow: function () {
+            console.log(this);
+
+        }
+    }
+    users.sayNameArrow()
+
+
+    // 5. Write an arrow function square that:
+
+    const square = n => n * n;
+    console.log(square(5));
+
+
+    // 6. Write a function sumAll that accepts any number of arguments and returns their sum.
+
+
+    function sumAll(...numbers) {
+        return numbers.reduce((sum, num) => sum + num, 0);
+    }
+    console.log(sumAll(1, 2, 3));
+
+
+
+    // 7. Given the array:
+
+    const marks = [98, 45, 67, 30, 88, 76];
+    const getPassedMarks = marks => marks.filter(mark => mark >= 50);
+    console.log(getPassedMarks(marks));
+
+
+
+
+
+    // 8. Rewrite this arrow function as a normal function declaration and as a function expression:
+
+    // Function declaration
+    // function formatName(firstName, lastName) {
+    //     return firstName.toUpperCase() + " " + lastName.toUpperCase();
+    // }
+
+    // Function Expression
+
+    // const formatName = function (firstName, lastName) {
+    //     return firstName.toUpperCase() + " " + lastName.toUpperCase();
+    // }
+
+
+
+
+
+
+    // 9. Observe the code and write:
+
+    // console.log(add(2, 3)); // Error
+    // console.log(sub(5, 2)); // Error
+
+    // function add(a, b) {
+    //     return a + b;
+    // }
+
+    // Cannot access 'sub' before initialization
+    // const sub = (a, b) => {
+    //     return a - b;
+    // };
+
+
+    // Function Declaration hoisted possible & callable before definition
+    // Arrow Function (const) hoisted not possible
+
+
+
+
+
+    // 10. Takes one parameter greeting
+
+    const createGreeting = greeting => name => `${greeting} ${name}`;
+
+    const sayHello = createGreeting("Hello");
+    console.log(sayHello("Mani"));
+
+    const sayVanakkam = createGreeting("Vanakkam");
+    console.log(sayVanakkam("Friend"));
+
+
+
+
+
+
+    // 11. Write a function getCharFrequency(str) that takes a string and returns an object where:
+
+    function getCharFrequency(str) {
+        const frequency = {};
+
+        for (let i = 0; i < str.length; i++) {
+            const char = str[i];
+
+            if (frequency[char]) {
+                frequency[char]++;
+            } else {
+                frequency[char] = 1;
+            }
+        }
+
+        return frequency;
+    }
+
+    console.log(getCharFrequency("banana"));
+
+
+
+
+
+
+    // 12. Find the second largest number
+
+    function secondLargest(arr) {
+        let largest = -Infinity;
+        let second = -Infinity;
+
+        for (let i = 0; i < arr.length; i++) {
+            const num = arr[i];
+
+            if (num > largest) {
+                second = largest;
+                largest = num;
+            } else if (num < largest && num > second) {
+                second = num;
+            }
+        }
+
+        return second === -Infinity ? null : second;
+    }
+
+    console.log(secondLargest([5, 7, 3, 1]));
+    console.log(secondLargest([10, 50, 30]));
+    console.log(secondLargest([5, 5, 5]));
+
+
+
+
+
+
+
+    // 13.Remove duplicates from an array
+
+    function isAnagram(str1, str2) {
+
+        str1 = str1.toLowerCase().replace(/ /g, "");
+        str2 = str2.toLowerCase().replace(/ /g, "");
+
+        if (str1.length !== str2.length) {
+            return false;
+        }
+
+        const count = {};
+
+        for (let i = 0; i < str1.length; i++) {
+            const char = str1[i];
+            count[char] = (count[char] || 0) + 1;
+        }
+
+
+        for (let i = 0; i < str2.length; i++) {
+            const char = str2[i];
+
+            if (!count[char]) {
+                return false;
+            }
+
+            count[char]--;
+        }
+
+        return true;
+    }
+
+
+    console.log(isAnagram("listen", "silent"));
+    console.log(isAnagram("Dormitory", "Dirty room"));
+    console.log(isAnagram("hello", "world"));
+
+
+
+
+
+    //14. Remove duplicates from an array
+
+    function uniqueValues(arr) {
+        const result = [];
+        for (let i = 0; i < arr.length; i++) {
+            let isDuplicate = false;
+
+            for (let j = 0; j < result.length; j++) {
+                if (arr[i] === result[j]) {
+                    isDuplicate = true;
+                    break;
+                }
+            }
+
+            if (!isDuplicate) {
+                result.push(arr[i]);
+            }
+        }
+
+        return result;
+    }
+    console.log(uniqueValues([1, 2, 2, 3, 1, 4]));
+
+
+
+    // 15. You get an array of objects:
+
+    function groupByAge(people) {
+        const result = {};
+
+        for (let i = 0; i < people.length; i++) {
+            const person = people[i];
+            const age = person.age;
+
+            if (!result[age]) {
+                result[age] = [];
+            }
+
+            result[age].push(person.name);
+        }
+
+        return result;
+    }
+
+    const people = [
+        { name: "Ajay", age: 20 },
+        { name: "Ravi", age: 21 },
+        { name: "Kumar", age: 20 },
+        { name: "Sara", age: 22 },
+    ];
+
+    console.log(groupByAge(people));
+
+
+    // 1. FACTORIAL PROGRAM USING FUNCTIONS
+
+    function factorial(n) {
+        let result = 1;
+
+        for (let i = 1; i <= n; i++) {
+            result *= i;
+        }
+
+        return result;
+    }
+    console.log(factorial(3));
+
+
+    // 2. REVERSE A STRING USING FUNCTIONS
+
+    function reverseString(str) {
+        let reversed = "";
+
+        for (let i = str.length - 1; i >= 0; i--) {
+            reversed += str[i];
+        }
+
+        return reversed;
+    }
+    console.log(reverseString("Welcome to the world"));
+
+
+    // 3. PRIME NUMBER USING FUNCTIONS.
+
+    function isPrime(num) {
+        if (num <= 1) return false;
+
+        for (let i = 2; i <= Math.sqrt(num); i++) {
+            if (num % i === 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+    console.log(isPrime(7));
+    console.log(isPrime(10));
+
+
+</script>
+</html>
