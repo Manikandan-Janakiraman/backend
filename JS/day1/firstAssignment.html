@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>First Day JavaScript Assignment</title>
+</head>
+<body>
+    <h1>Check Console for Output</h1>
+
+    <script>
+        
+        //  * 1. VARIABLES (var, let, const)
+         
+        var name = "JavaScript";
+        let version = 2025;
+        const language = "JS";
+
+        console.log("Variables:", name, version, language);
+
+
+        
+        //  * 2. HOISTING
+         
+        console.log(hoistVar); // undefined (hoisted)
+        var hoistVar = "I am hoisted";
+
+        // console.log(hoistLet); // Error (not hoisted)
+        let hoistLet = "Let is not hoisted";
+
+
+        
+        //  * 3. SCOPE
+         
+
+        // Global Scope
+        var globalVar = "Global Scope";
+
+        function scopeTest() {
+            // Function Scope
+            var functionVar = "Function Scope";
+            console.log(functionVar);
+
+            if (true) {
+                // Block Scope
+                let blockLet = "Block Scope";
+                const blockConst = "Block Const";
+                console.log(blockLet, blockConst);
+            }
+
+            // console.log(blockLet); // Error
+        }
+
+        scopeTest();
+        console.log(globalVar);
+
+
+        
+        //  * 4. PRIMITIVE DATA TYPES
+         
+        let stringType = "newworld";
+        let numberType = 70;
+        let booleanType = true;
+        let undefinedType;
+        let nullType = null;
+        let symbolType = Symbol("id");
+        let bigIntType = 12345678901234567890n;
+
+        console.log("String:", stringType);
+        console.log("Number:", numberType);
+        console.log("Boolean:", booleanType);
+        console.log("Undefined:", undefinedType);
+        console.log("Null:", nullType);
+        console.log("Symbol:", symbolType);
+        console.log("BigInt:", bigIntType);
+
+
+        
+        //  * 5. OPERATORS
+         
+
+        // Arithmetic Operators
+        console.log("Add:", 10 + 20);
+        console.log("Sub:", 20 - 7);
+        console.log("Mul:", 50 * 5);
+        console.log("Div:", 20 / 5);
+        console.log("Mod:", 20 % 3);
+
+        // Assignment Operators
+        let val = 10;
+        val += 5;
+        console.log("Assignment:", val);
+
+        // Comparison Operators
+        console.log(5 == "5");   // true
+        console.log(8 === "8");  // false
+        console.log(10 != 5);      // true
+        console.log(10 > 5);       // true
+
+        // Logical Operators
+        console.log(true && false); // false
+        console.log(true || false); // true
+        console.log(!true);         // false
+
+        // Ternary Operator
+        let age = 18;
+        let result = (age >= 18) ? "Adult" : "Minor";
+        console.log(result);
+
+
+        
+        //  * 6. TRUTHY & FALSY VALUES
+         
+
+        // FALSY VALUES
+        console.log(Boolean(false));
+        console.log(Boolean(0));
+        console.log(Boolean(""));
+        console.log(Boolean(null));
+        console.log(Boolean(undefined));
+        console.log(Boolean(NaN));
+
+        // TRUTHY VALUES
+        console.log(Boolean(1));
+        console.log(Boolean("hello"));
+        console.log(Boolean([]));
+        console.log(Boolean({}));
+        console.log(Boolean("0"));
+    </script>
+</body>
+</html>
