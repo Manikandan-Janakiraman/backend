@@ -1,0 +1,359 @@
+<script>
+
+
+    // Task 1.1: 
+    // Write a function that takes an array of numbers and returns a new array containing only the even numbers. Use a for loop.
+
+    let a = [27, 34, 50]
+    let evenno = [];
+    for (let i = 0; i < a.length; i++) {
+        if (a[i] % 2 === 0)
+            evenno.push(a[i]);
+    }
+    console.log("Even Numbers:", evenno);
+
+
+    let b = [25, 8, 7, 17]
+    let odd = [];
+    for (let i = 0; i < b.length; i++) {
+        if (b[i] % 2 !== 0)
+            odd.push(b[i]);
+    }
+    console.log("Odd Numbers:", odd);
+
+
+
+
+
+
+    // Task 1.2: Create a function that accepts a number (1-7) and returns the day of the week using a switch statement. Handle invalid inputs.
+    let day = 7;
+    switch (day) {
+        case 1:
+            console.log("Monday");
+            break;
+        case 2:
+            console.log("Tuesday");
+            break;
+        case 3:
+            console.log("Wednesday");
+            break;
+        case 4:
+            console.log("Thursday");
+            break;
+        case 5:
+            console.log("Friday");
+            break;
+        case 6:
+            console.log("Saturday");
+            break;
+        case 7:
+            console.log("Sunday");
+            break;
+        default:
+            console.log("Invalid Input");
+    }
+
+
+
+    // Task 1.3: Write a function that takes an array of objects (students with marks) and
+    // returns the count of students in each grade category (A: 90+, B: 75-89, C: below 75).
+    // Use appropriate loops and conditionals.
+
+
+    const students = [
+        { name: "Arun", marks: 92 },
+        { name: "Mani", marks: 81 },
+        { name: "Vel", marks: 68 },
+        { name: "Ram", marks: 75 },
+        { name: "Krish", marks: 90 }
+    ];
+
+    console.log(countGrades(students));
+
+    function countGrades(students) {
+        let grades = {
+            A: 0,
+            B: 0,
+            C: 0
+        };
+
+        for (let i = 0; i < students.length; i++) {
+            let marks = students[i].marks;
+            if (marks >= 90) {
+                grades.A++;
+            } else if (marks >= 75 && marks <= 89) {
+                grades.B++;
+            } else {
+                grades.C++;
+            }
+        }
+
+        return grades;
+    }
+
+
+
+
+    // Task 2.1: Write a function that accepts any value and returns "truthy" or "falsy" as a string. 
+    // Test it with: 0, "", null, undefined, [], {}, false, "hello".
+
+    // Falsy Value
+    let c = "";
+    if (c) {
+        console.log("Truthy Value", c);
+    } else {
+        console.log("Not Truthy Value", c);
+    }
+
+
+    // Falsy Value:
+    let d = 0;
+    if (d) {
+        console.log("Truthy Value", d);
+    } else {
+        console.log("Not Truthy Value", d);
+    }
+
+
+    // Falsy Value:
+    let e = null;
+    if (e) {
+        console.log("Truthy Value", e);
+    } else {
+        console.log("Not Truthy Value", e);
+    }
+
+
+    // Truthy Value
+    let f = {};
+    if (f) {
+        console.log("Truthy Value", f);
+    } else {
+        console.log("Not Truthy Value", f);
+    }
+
+
+    // Truthy Value
+    let g = [];
+    if (g) {
+        console.log("Truthy Value", g);
+    } else {
+        console.log("Not Truthy Value", g);
+    }
+
+
+    // Falsy Value
+    let h = false;
+    if (h) {
+        console.log("Truthy Value", h);
+    } else {
+        console.log("Not Truthy Value", h);
+    }
+
+
+    // Truthy Value
+    let i = "Hello";
+    if (i) {
+        console.log("Truthy Value", i);
+    } else {
+        console.log("Not Truthy Value", i);
+    }
+
+
+
+
+    // Task 2.2: Create a function that takes an array of mixed values and returns a new array containing only the truthy values.
+
+    const values = [0.2, 1n, true, "", "World", null, undefined, 25];
+    console.log(getTruthyValue(values));
+
+    function getTruthyValue(a) {
+        let result = [];
+        for (let i = 0; i < a.length; i++) {
+            if (a[i]) {
+                result.push(a[i]);
+            }
+        }
+        return result;
+    }
+
+
+    // Task 2.3: Write a function that accepts three parameters (firstName, lastName, nickname). 
+    // Return the full name as "firstName lastName", but if lastName is falsy, return just firstName. 
+    // If both are falsy but nickname exists, return nickname. If all are falsy, return "Anonymous".
+
+    function namelist(firstName, lastName, nickname) {
+        if (firstName && lastName) {
+            return `${firstName} ${lastName}`;
+        }
+
+        if (firstName) {
+            return firstName;
+        }
+
+        if (nickname) {
+            return nickname;
+        }
+
+        return "Anonymous";
+    }
+
+    console.log(namelist("jahan", "raman", "juju"));
+    console.log(namelist("gugan", "", "hari"));
+    console.log(namelist("", "", "vikram"));
+    console.log(namelist(null, null, null));
+
+
+
+
+    // Task 3.2: Write a function that demonstrates the var loop problem with setTimeout. 
+    // Then fix it using two different methods: one with let and one using closures.
+
+
+    function varLoop() {
+        for (var i = 0; i < 5; i++) {
+            setTimeout(() => {
+                console.log(i);
+            }, 1000);
+        }
+    }
+
+
+
+    function Let() {
+        for (let i = 0; i < 5; i++) {
+            setTimeout(() => {
+                console.log(i);
+            }, 1000);
+        }
+    }
+
+
+    function Closure() {
+        for (var i = 0; i < 5; i++) {
+            (function (j) {
+                setTimeout(() => {
+                    console.log(j);
+                }, 1000);
+            })(i);
+        }
+    }
+
+
+
+
+
+    // Task 3.3: Create a function that attempts to reassign values to variables declared with var,
+    // let, and const.Also attempt to modify properties of a const object.Explain what works and what throws errors.
+
+
+
+    function value() {
+
+        var a = 10;
+        a = 20;
+        console.log("var a:", a);
+
+        let b = 30;
+        b = 40;
+        console.log("let b:", b);
+
+        const c = 50;
+
+        const user = {
+            name: "John",
+            age: 25
+        };
+
+
+        user.age = 26;
+        user.city = "Chennai";
+        console.log("const object:", user);
+    }
+
+    value();
+
+
+
+    // Task 4.1: Create a function called createMultiplier that takes a number as an argument and 
+    // returns a function. The returned function should take another number and return the product of both numbers. 
+    // Test with different multipliers.
+
+
+    function createMultiplier(multiplier) {
+        return function (number) {
+            return multiplier * number;
+        };
+    }
+
+    const double = createMultiplier(2);
+    console.log(double(5));
+
+    const triple = createMultiplier(3);
+    console.log(triple(5));
+
+    const tenTimes = createMultiplier(10);
+    console.log(tenTimes(5));
+
+
+    // Task 4.2: Write a function called secretPassword that returns an object with two methods: setPassword(newPass) 
+    // and checkPassword(guess). The actual password should be private (not accessible from outside) and only modifiable through setPassword. 
+    // checkPassword should return true or false.
+
+    function secretPassword() {
+        let password = "";
+
+        return {
+            setPassword(newPass) {
+                password = newPass;
+            },
+            checkPassword(guess) {
+                return password === guess;
+            }
+        };
+    }
+
+    const myAccount = secretPassword();
+
+    myAccount.setPassword("mySecret123");
+
+    console.log(myAccount.checkPassword("mySecret123"));
+    console.log(myAccount.checkPassword("wrongPass"));
+
+    console.log(myAccount.password);
+
+
+
+
+
+    // Task 4.3: Create a function called once that takes another function as an argument. 
+    // Return a new function that can only be called once. Subsequent calls should return the result
+    // of the first call without executing the original function again. Use closures to track whether it has been called.
+
+    function once(fn) {
+        let called = false;
+        let result;
+
+        return function (...args) {
+            if (!called) {
+                result = fn(...args);
+                called = true;
+            }
+            return result;
+        };
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
