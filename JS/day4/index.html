@@ -1,0 +1,166 @@
+<script>
+
+
+    // 1. Create a function that accepts a callback and prints “Task Completed” only after the callback runs.
+
+
+    function hello() {
+        console.log("Task Completed");
+    }
+    hello()   // callback 
+
+
+
+    // 2. Pass a callback to validate age eligibility and print result.
+
+
+    function checkAge(age, callback) {
+        callback(age);
+    }
+
+
+    function validage(age) {
+        if (age >= 18) {
+            console.log("Valid Age");
+
+        } else {
+            console.log("Not a Valid Age");
+
+        }
+    }
+    checkAge(20, validage);
+    checkAge(15, validage);
+
+
+
+    // 4. Add 3 elements to an array and remove the first element.
+
+    let myArray = ['apple', 'banana', 'cherry'];
+    myArray.shift(); // remove the first element
+    console.log(myArray);
+
+
+
+    // 5. Replace the last element in an array without using index value.
+
+    function replaceLastElement(arr, newValue) {
+        arr.pop();       // remove last array
+        arr.push(newValue); // add new array in the end
+        return arr;
+    }
+
+    let numbers = [17, 27, 37, 42];
+    replaceLastElement(numbers, 47);
+    console.log(numbers);
+
+
+
+    // 6. Remove exactly 2 elements from middle of an array.
+
+    function removeTwoFromMiddle(arr) {
+        const middleIndex = Math.floor(arr.length / 2) - 1;
+        arr.splice(middleIndex, 2);
+        return arr;
+    }
+    let num = [6, 14, 22, 33, 45, 66];
+
+    removeTwoFromMiddle(num);
+    console.log(num);
+
+
+
+    // 7. From an array, return only even numbers using filter.
+
+    function getEvenNumbers(arr) {
+        return arr.filter(num => num % 2 === 0);
+    }
+
+    let array = [7, 10, 15, 22, 27]
+    console.log(getEvenNumbers(array));
+
+
+    // Odd Number
+    function getOddNumbers(arr) {
+        return arr.filter(num => num % 2 !== 0);
+    }
+
+    let odd = [7, 10, 15, 22, 27]
+    console.log(getOddNumbers(odd));
+
+
+
+    // 8. Convert array of prices to GST-added prices using map.
+
+    function addGST(prices, gstRate = 18) {
+        return prices.map(price => {
+            return price + (price * gstRate / 100);
+        })
+    }
+
+    let prices = [250, 350, 190]
+    let gstPrice = addGST(prices);
+    console.log(gstPrice);
+
+
+
+    // 9. Find total salary from salary array using reduce.
+
+    function getTotalSalary(salaries) {
+        return salaries.reduce((total, salary) => total + salary, 0);
+    }
+    const salaries = [3000, 4500, 7000, 9500];
+
+    console.log(getTotalSalary(salaries));
+
+
+
+    // 1. Which array method returns a new array always?
+    // map() always returns a new array
+
+
+    // 2. Which method can return a single value from an array?
+    // Reduce return a single value from an array.
+
+
+    // 3. Is forEach a higher-order function?
+    //      Yes, accepts callback function
+    //      Execute for each element
+
+
+    // 4. Can map modify original array?
+    //      No
+
+
+    // 5. Which method is best for searching condition-based data?
+    //      find() method
+
+
+
+    
+    // 3. Simulate API call → success callback → final message.
+
+    function dummyApiCall(successCallback) {
+        console.log("API call started...");
+
+        setTimeout(() => {
+            const response = {
+                status: 200,
+                data: "User data fetched successfully"
+            };
+
+            successCallback(response);
+        }, 2000);
+    }
+
+    function onSuccess(response) {
+        console.log("Success callback executed");
+        console.log(response.data);
+        console.log("Final message: API process completed");
+    }
+
+    dummyApiCall(onSuccess);
+
+
+
+
+</script>
