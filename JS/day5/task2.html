@@ -1,0 +1,679 @@
+<script>
+
+    // Task 2: Arrow Functions
+
+    // Convert a normal function into arrow function.
+
+    function adds() {
+        console.log(6 + 7);
+    }
+    adds()
+
+    const addss = () => { console.log(6 + 7); }
+    addss()
+
+
+
+
+
+    // 2. Write an arrow function with one parameter.
+
+    const sub = (a) => {
+        console.log(a - 5);
+    }
+    sub(40)
+
+    const subs = (c, b) => {
+        console.log(b - c);
+    }
+    subs(40, 70)
+
+
+    // 3. Write an arrow function that returns an object.
+
+    const value = (x, y) => {
+        return x + y;
+    }
+    console.log(value(20, 40));
+
+
+    // 4. Use arrow function inside map().
+
+    const number = [1, 2, 3];  // 1 index + 0  2 index + 1 , 3 index + 2
+    const result = number.map((currentValue, index) => {
+        return currentValue + index;
+    })
+    console.log(result);
+
+
+
+
+
+    // Task 3: Template Literals
+
+
+    // 1. Print user details using template literals.
+
+    const user = {
+        name1: "Mani", age1: "25",
+        name2: "vel", age2: "20",
+        name3: "sabari", age3: "27",
+    }
+    console.log(`Welcome ${user.name1}, ${user.age1}`);
+
+
+    const userdetails = [
+
+        { name: "Mani", age: "25" },   ///0
+        { name: "vel", age: "20" },   ///1
+        { name: "sabari", age: "27", }  /// 2
+    ]
+    console.log(`Welcome ${userdetails[0].name}, ${userdetails[0].age}`);
+    console.log(`Welcome ${userdetails[1].name}, ${userdetails[1].age}`);
+    console.log(`Welcome ${userdetails[2].name}, ${userdetails[2].age}`);
+
+
+
+    // 2. Convert old string concatenation to template literal.
+
+    // const string1 = "Hello "
+    // const string2 = "World"
+
+    // const results = string1 + string2;
+    // console.log(results);
+
+    const string1 = "Hello"
+    const string2 = "World"
+
+    console.log(`${string1} ${string2}`);
+
+
+    // 3. Create a multiline string using backticks.
+
+    const datav = "This is first line"
+    "This is second line."
+    "This is third line."
+    console.log(datav);
+
+
+    const data = `This is first line.
+    This is second line.
+    Tis is third line`;
+    console.log(data);
+
+
+
+    // 4. Use expressions inside ${}.
+
+    const datavals = "Four";
+    const datass = `This is first line.
+    This is second line.
+    Tis is third line ${datavals}`;
+    console.log(datass);
+
+
+    // 🧪 class Tasks
+
+    // 1. Create a Student class with name and age.   // constructor this and new 
+
+    class Student {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        getDetails() {
+            // return `${this.name} ${this.age}`;
+            return this.name, this.age;
+        }
+    }
+    const studentdata = new Student("Mani", 25);
+    console.log(studentdata);
+
+
+    // 2. Create a BankAccount class with deposit and withdraw methods.
+
+    class BankAccount {
+        constructor(deposit, withdraw) {
+            this.deposit = deposit;
+            this.withdraw = withdraw;
+        }
+        getAccount() {
+            // return `${this.deposit} - ${this.withdraw}`;
+            return this.deposit - this.withdraw;
+        }
+    }
+    const datavalue = new BankAccount(100000, 25000);
+    console.log(datavalue.getAccount());
+
+
+
+    // 3. Create 3 objects from one class.
+
+    class Students {
+        constructor(name, age) {
+            this.name = name;
+            this.age = age;
+        }
+
+        getDetails() {
+            return `Name: ${this.name}, Age: ${this.age}`;
+            // return this.name, this.age;
+        }
+    }
+    const studentdatas1 = new Students("Mani", 25);
+    const studentdatas2 = new Students("Vel", 25);
+    const studentdatas3 = new Students("Sabari", 25);
+    console.log(studentdatas1.getDetails());
+    console.log(studentdatas2.getDetails());
+    console.log(studentdatas3.getDetails());
+
+
+    //4. Convert a function-based constructor into a class.
+
+    function Person(name, age) {
+
+        this.name = name;
+        this.age = age;
+    }
+    Person.prototype.getDetails = function () {
+        return `${this.name}, ${this.age}`;
+    }
+
+    const Personname = new Person("Arun", 24);
+    console.log(Personname.getDetails());
+
+
+
+    // 🧪 import / export Tasks
+    //    1.Create a file that exports two functions.
+
+    // export function greet(name) {
+    //     return `Hello, ${name}`;
+    // }
+
+    // export function add(a, b) {
+    //     return a + b;
+    // }
+
+    // // 2. Import those functions into another file and use them.
+    // // utils.js
+
+    // import { greet, add } from "./utils.js";
+
+    // console.log(greet("Mani"));
+    // console.log(add(10, 20));
+
+
+    // // 3. Create a default export and import it
+    // // filename: math.js
+    // export default function multiply(a, b) {
+    //     return a * b;
+    // }
+
+    // import multiply from "./math.js";
+    // console.log(multiply(5, 4));
+
+
+    // // 4. Separate a class into another file and import it
+    // // user.js
+    // export class User {
+    //     constructor(name, role) {
+    //         this.name = name;
+    //         this.role = role;
+    //     }
+
+    //     getDetails() {
+    //         return `${this.name} is a ${this.role}`;
+    //     }
+    // }
+
+
+    // import { User } from "./User.js";
+
+    // const user1 = new User("Manikandan", "Frontend Developer");
+    // console.log(user1.getDetails());
+
+
+
+    //Destructuring Tasks
+
+    //1.  Destructure values from an array.
+
+    let [a, , ...d] = [10, 20, 30, 40];
+
+    console.log(a);
+    console.log(d);
+
+
+    //2. Destructure properties from an object.
+
+    let { x, y, ...restof } = { x: 10, y: 20, m: 30, n: 40 };
+    console.log(x);
+    console.log(y);
+    console.log(restof); // {m: 30, n: 40}
+
+
+    //3.  Rename variables while destructuring.
+
+    // Syntax: { originalKey: NewVariableName }
+
+    const users = {
+        id: 1,
+        fullName: "John Doe"
+    };
+
+    const { fullName: userName, id: userId } = users;
+
+    console.log(userName);
+    console.log(userId);
+
+
+
+    //4.  Destructure function parameters.
+
+    // Array destructuring ([name, age])
+    // Object Destructuring ({name, age})
+
+
+    function displayUser({ firstName, lastName, age }) {
+        console.log(`Name: ${firstName} ${lastName}, Age: ${age}`);
+    }
+    const userData = { firstName: 'Jane', lastName: 'Doe', age: 30 };
+    displayUser(userData);
+    // Output: Name: Jane Doe, Age: 30
+
+
+
+
+    //  Spread Operator Tasks
+    // 1. Copy an array using spread.
+
+    const numbers = [1, 2, 3];
+    const copyNumbers = [...numbers];
+    console.log(copyNumbers);
+
+
+    // 2. Merge two arrays using spread.
+
+    const arr1 = [1, 2];
+    const arr2 = [3, 4];
+    const mergedArray = [...arr1, ...arr2];
+    console.log(mergedArray); // [1, 2, 3, 4]
+
+
+    // 3. Update an object using spread.
+
+    const userdet = { id: 1, name: "John", role: "User" };
+
+    const updatedUser = { ...userdet, role: "Admin", isActive: true };
+    console.log(updatedUser);
+
+
+    // Pass array values into a function using spread.
+
+    function add(a, b, c) {
+        return a + b + c;
+    }
+    const values = [10, 20, 30];
+    console.log(add(...values)); // 60
+
+
+
+
+    //Rest Operator Tasks
+    // Create a function that accepts unlimited arguments.
+
+    function sum(...numbers) {
+        console.log(numbers);
+    }
+    sum(1, 2, 3, 4, 5);
+
+    // Use rest parameter with reduce.
+
+    function totalSum(...nums) {
+        return nums.reduce((total, num) => total + num, 0);
+    }
+    console.log(totalSum(10, 20, 30)); // 60
+    console.log(totalSum(5, 5, 5, 5)); // 20
+
+
+    // Combine rest with destructuring.
+    const colors = ["red", "green", "blue", "yellow"];
+
+    const [firstColor, secondColor, ...remainingColors] = colors;
+
+    console.log(firstColor);       // red
+    console.log(secondColor);      // green
+    console.log(remainingColors);  // ["blue", "yellow"]
+
+
+
+    // Explain rest vs spread with example.
+
+    const nums = [1, 2, 3];
+    console.log(...nums); // 1 2 3
+    // given array change to value
+
+    function printNumbers(...nums) {
+        console.log(nums);
+    }
+    printNumbers(1, 2, 3); // [1, 2, 3]
+    /// given value change to array
+
+
+
+    // Ternary Operator Tasks
+    // condition ? valueIfTrue : valueIfFalse
+
+
+    // Check even or odd using ternary.
+    const numberz = 7;
+
+    const resultz = numberz % 2 === 0 ? "Even" : "Odd";
+    console.log(resultz); // "Odd"
+
+
+    // Find pass or fail using ternary.
+    const marks = 45;
+
+    const status = marks >= 40 ? "Pass" : "Fail";
+
+    console.log(status); // "Pass"
+
+
+    // Replace simple if–else with ternary.
+    let age = 20;
+    let message;
+
+    if (age >= 18) {
+        message = "Eligible to vote";
+    } else {
+        message = "Not eligible";
+    }
+
+    const messages = age >= 18 ? "Eligible to vote" : "Not eligible";
+    console.log(messages);
+
+
+    // Use nested ternary(optional challenge).
+    const score = 85;
+
+    const grade =
+        score >= 90 ? "A" :
+            score >= 75 ? "B" :
+                score >= 60 ? "C" :
+                    "Fail";
+
+    console.log(grade); // "B"
+
+
+
+
+    //     Optional Chaining Tasks
+    //     object?.property
+    // object?.method()
+    // array?.[index]
+
+
+
+    // Access nested object safely using ?..
+    const userz = {
+        profile: {
+            name: "John"
+        }
+    };
+    console.log(userz.profile?.name);   // "John"
+    console.log(userz.address?.city);   // undefined (no error)
+
+
+    // Replace && condition with optional chaining.
+    const userNames = user && user.profile && user.profile.name;
+
+    const userNamez = user?.profile?.name;
+
+
+
+
+    // Use optional chaining on array access.
+    const userss = [
+        { name: "Alice" },
+        { name: "Bob" }
+    ];
+
+    console.log(userss?.[0]?.name); // "Alice"
+    console.log(userss?.[2]?.name); // undefined (safe)
+
+
+    // Simulate API response and access data safely.
+
+
+    const apiResponse = {
+        status: 200,
+        data: {
+            user: {
+                id: 1,
+                profile: {
+                    fullName: "John Doe"
+                }
+            }
+        }
+    };
+
+    // Safe access
+    const userNamezz = apiResponse?.data?.user?.profile?.fullName;
+
+    console.log(userNamezz); // "John Doe"
+
+
+
+
+
+    //     Nullish Coalescing (??) Tasks
+    // Compare || and ?? with value 0.
+    const scores = 0;
+
+    console.log(scores || 100);
+    console.log(scores ?? 100);
+
+
+    // Handle empty string using ??.
+    const name = "";
+
+    console.log(name || "Guest");
+    console.log(name ?? "Guest");
+
+
+
+
+    // Provide default value using ??.
+    function getUserRole(role) {
+        return role ?? "User";
+    }
+
+    console.log(getUserRole("Admin")); // "Admin"
+    console.log(getUserRole(null));    // "User"
+    console.log(getUserRole());        // "User"
+
+
+    // Combine optional chaining with ??.
+
+    const apiResponses = {
+        data: {
+            user: {
+                name: "John"
+            }
+        }
+    };
+
+    const userNamei = apiResponses?.data?.user?.name ?? "Guest";
+
+    console.log(userNamei); // "John"
+
+
+
+
+
+
+
+    //     ES2024(ES15) Concept Tasks
+
+    // 1. Explain Promise.withResolvers() in your own words.
+    // Promise.withResolvers() is a new ES2024 feature that lets you create a promise 
+    // and directly access its resolve and reject functions without writing the promise executor manually.
+
+
+    //2. Rewrite old Promise creation using ES2024 syntax.
+    // let resolveFn, rejectFn;
+
+    // const promise = new Promise((resolve, reject) => {
+    //     resolveFn = resolve;
+    //     rejectFn = reject;
+    // });
+
+    // resolveFn("Success");
+
+
+    // const { promise, resolve, reject } = Promise.withResolvers();
+    // resolve("Success");
+
+
+
+    // 3. Identify where manual promise control is useful.
+    // const { promise, resolve } = Promise.withResolvers();
+    // button.addEventListener("click", () => resolve("Clicked"));
+    // await promise; // waits until user clicks
+
+
+
+    // 4. Explain why ES2024 focuses on stability instead of syntax.
+    // JavaScript already has rich syntax
+    // Current problems are about:
+    // Maintainability
+    // Readability
+    // Safety
+    // Developers need better primitives, not more keywords
+
+
+
+    // 1. First Non-Repeating Character
+    // Given a string, find the first character that does not repeat.
+
+    function firstNonRepeatingChar(str) {
+        const charCount = {};
+
+        for (let char of str) {
+            charCount[char] = (charCount[char] || 0) + 1;
+        }
+        for (let char of str) {
+            if (charCount[char] === 1) {
+                return char;
+            }
+        }
+
+        return null;
+    }
+    console.log(firstNonRepeatingChar("aabbcdde")); // "c"
+
+
+
+
+    // 2. Move All Zeros to End
+    // Given an array, move all 0s to the end, without changing the order of other elements.
+
+    function moveZerosToEnd(arr) {
+        let result = [];
+        let zeroCount = 0;
+
+        for (let num of arr) {
+            if (num === 0) {
+                zeroCount++;
+            } else {
+                result.push(num);
+            }
+        }
+
+        while (zeroCount > 0) {
+            result.push(0);
+            zeroCount--;
+        }
+
+        return result;
+    }
+
+    console.log(moveZerosToEnd([1, 0, 3, 0, 5, 0, 2]));
+
+
+
+    //3. Check Rotation of String
+    // Check whether one string is a rotation of another.
+
+    function isRotation(str1, str2) {
+        if (str1.length !== str2.length) return false;
+
+        return (str1 + str1).includes(str2);
+    }
+    console.log(isRotation("abcd", "cdab")); // true
+
+
+
+
+    // 4. Longest Consecutive Sequence
+
+    function longestConsecutive(nums) {
+        const numSet = new Set(nums);
+        let longest = 0;
+
+        for (let num of numSet) {
+            if (!numSet.has(num - 1)) {
+                let currentNum = num;
+                let count = 1;
+
+                while (numSet.has(currentNum + 1)) {
+                    currentNum++;
+                    count++;
+                }
+
+                longest = Math.max(longest, count);
+            }
+        }
+
+        return longest;
+    }
+
+    console.log(longestConsecutive([100, 4, 200, 1, 3, 2]));
+
+
+    // 5. Balanced Brackets
+
+    function isBalanced(str) {
+        const stack = [];
+        const bracketMap = {
+            ')': '(',
+            '}': '{',
+            ']': '['
+        };
+
+        for (let char of str) {
+            
+            if (char === '(' || char === '{' || char === '[') {
+                stack.push(char);
+            }
+            
+            else if (bracketMap[char]) {
+                if (stack.pop() !== bracketMap[char]) {
+                    return false;
+                }
+            }
+        }
+
+        return stack.length === 0;
+    }
+
+    console.log(isBalanced("{[()]}")); // true
+    console.log(isBalanced("{[(])}")); // false
+
+
+
+
+</script>
