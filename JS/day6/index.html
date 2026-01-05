@@ -1,0 +1,324 @@
+<script>
+    //CALLBACK PROGRAM
+
+
+    // const getDatas = (callback) => {
+    //     setTimeout(() => {
+    //         callback("Welcome to the World")
+    //     }, 4000)
+    // }
+
+    // getDatas((result) => {
+    //     console.log(result);
+    // })
+
+
+
+
+
+    // Callback-based calculator
+
+    const calculator = (a, b, operation, callback) => {
+        if (typeof a !== "number" || typeof b !== "number") {
+            return callback("Inputs must be numbers", null);
+        }
+
+        switch (operation) {
+            case "add":
+                callback(null, a + b);
+                break;
+
+            case "sub":
+                callback(null, a - b);
+                break;
+
+            case "mul":
+                callback(null, a * b);
+                break;
+
+            case "div":
+                if (b === 0) {
+                    callback("Cannot divide by zero", null);
+                } else {
+                    callback(null, a / b);
+                }
+                break;
+
+            default:
+                callback("Invalid operation", null);
+        }
+    };
+
+    calculator(10, 5, "sub", (error, result) => {
+        if (error) {
+            console.log("Error:", error);
+        } else {
+            console.log("Result:", result);
+        }
+    });
+
+
+
+
+
+    //Nested callback
+
+    // Nested callback - FIXED
+
+    // const getData = (callback) => {
+    //     setTimeout(() => {
+    //         console.log("Welcome");
+
+    //         const getValue = (innerCallback) => {
+    //             setTimeout(() => {
+    //                 innerCallback("Success");
+    //             }, 2000);
+    //         };
+
+    //         getValue(callback);
+
+    //     }, 1000);
+    // };
+
+
+    // getData((result) => {
+    //     console.log(result);
+    // });
+
+
+
+
+    // Callback error handling
+
+    // const checkNumber = (i, callback) => {
+    //     if (typeof i !== "number") {
+    //         callback("Input must be a number", null);
+    //         return;
+    //     }
+
+    //     if (i % 2 === 0) {
+    //         callback(null, "Positive (Even)");
+    //     } else {
+    //         callback(null, "Negative (Odd)");
+    //     }
+    // };
+
+    // // Function call
+    // checkNumber(5, (error, result) => {
+    //     if (error) {
+    //         console.log("Error:", error);
+    //     } else {
+    //         console.log(result);
+    //     }
+    // });
+
+
+
+    // Simulate API using callback
+
+
+    // const fakeApi = (data, callback) => {
+    //     console.log("API call started...");
+
+    //     setTimeout(() => {
+    //         const success = true;
+
+    //         if (!success) {
+    //             callback("API Error: Something went wrong", null);
+    //         } else {
+    //             callback(null, {
+    //                 status: 200,
+    //                 message: "Data fetched successfully",
+    //                 data: data
+    //             });
+    //         }
+    //     }, 2000);
+    // };
+
+    // // API call
+    // fakeApi({ user: "Mani", role: "Frontend Dev" }, (error, response) => {
+    //     if (error) {
+    //         console.log("Error:", error);
+    //     } else {
+    //         console.log("Response:", response);
+    //     }
+    // });
+
+
+
+
+
+// PROMISE – 5 Programs
+
+    // Promise resolve after delay
+
+    const delayResolve = (message, time) => {
+        return new Promise((resolve) => {    
+            setTimeout(() => {
+                resolve(message);
+            }, time);
+        });
+    };
+
+    delayResolve("Success after 2 seconds", 2000)
+        .then(result => console.log(result));
+
+
+    // Promise reject example
+    // const checkAge = (age) => {
+    //     return new Promise((resolve, reject) => {
+    //         if (age >= 18) {
+    //             resolve("Access granted");
+    //         } else {
+    //             reject("Access denied");
+    //         }
+    //     });
+    // };
+
+    // checkAge(16)
+    //     .then(res => console.log(res))
+    //     .catch(err => console.log("Error:", err));
+
+
+
+
+    // Promise chaining
+
+    const step1 = () => Promise.resolve(5);
+    const step2 = (num) => Promise.resolve(num * 2);
+    const step3 = (num) => Promise.resolve(num + 3);
+
+    step1()
+        .then(step2)
+        .then(step3)
+        .then(result => console.log("Final Result:", result))
+        .catch(err => console.log(err));
+
+
+
+
+    //Promise.all usage
+
+    const api1 = () => Promise.resolve("User Data");
+    const api2 = () => Promise.resolve("Order Data");
+    const api3 = () => Promise.resolve("Payment Data");
+
+    Promise.all([api1(), api2(), api3()])
+        .then(results => {
+            console.log(results);
+            // ["User Data", "Order Data", "Payment Data"]
+        })
+        .catch(error => console.log("Error:", error));
+
+
+
+    // Convert callback to promise
+
+
+    // const fetchData = (callback) => {
+    //     setTimeout(() => {
+    //         callback(null, "Data received");
+    //     }, 1000);
+    // };
+
+    const fetchDataPromise = () => {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve("Data received");
+            }, 1000);
+        });
+    };
+
+    fetchDataPromise()
+        .then(data => console.log(data))
+        .catch(err => console.log(err));
+
+
+
+
+
+
+
+
+
+// ASYNC/AWAIT – 5 Programs
+    // Async function returning value
+
+    async function getNumber() {
+        return 10;
+    }
+
+    getNumber().then(result => console.log(result));
+
+
+
+    // try / catch error handling
+    async function checkAge(age) {
+        try {
+            if (age < 18) {
+                throw "Not eligible";
+            }
+            return "Eligible";
+        } catch (error) {
+            return error;
+        }
+    }
+
+    checkAge(16).then(console.log);
+
+
+
+    // Sequential await calls (slower)
+    const task1 = () =>
+        new Promise(resolve => setTimeout(() => resolve("Task 1 done"), 1000));
+
+    const task2 = () =>
+        new Promise(resolve => setTimeout(() => resolve("Task 2 done"), 1000));
+
+    async function runSequential() {
+        const r1 = await task1();
+        const r2 = await task2();
+        console.log(r1, r2);
+    }
+
+    runSequential();
+
+
+
+    //Parallel await using Promise.all 
+    async function runParallel() {
+        const [r1, r2] = await Promise.all([task1(), task2()]);
+        console.log(r1, r2);
+    }
+
+    runParallel();
+
+
+
+
+    // Promise version:
+    const fetchData = () => {
+        return new Promise((resolve) => {
+            setTimeout(() => resolve("Data loaded"), 1000);
+        });
+    };
+
+    fetchData().then(console.log);
+
+
+    // Async / Await version:
+    async function fetchDataAsync() {
+        const result = await fetchData();
+        console.log(result);
+    }
+
+    fetchDataAsync();
+
+
+
+
+
+
+
+
+</script>
