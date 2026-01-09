@@ -1,0 +1,104 @@
+Project Setup:
+
+.ENV -> Environment Variable
+
+
+
+React
+-> Component Based Architecture
+-> Commonly used for web development 
+-> Virtual dom
+-> State management
+-> Diffing Algorithm
+-> Deprecated
+
+
+package-json:
+import and eport
+dependencies
+dom
+module
+scripts
+tailwind css
+
+
+node module Missing:
+
+Error:
+package is missing 
+
+we have to solve by using npm install command then run the process 
+
+Component add in single page and multi page also
+
+
+Pages
+    Admin
+    client 
+    vendor    
+Component 
+hoc
+hooks
+services 
+utilities (data format, validation)
+Content
+Provider
+auth
+Middleware
+
+
+Create Phase:
+    Components - 
+    Class - Function
+        Small kind of ui structures 
+
+
+
+Abbreviation:
+vh - viewport height 
+<> </> - Fragment has no behaviour 
+rafce - react arrow Function Component expression 
+ctrl space - to add or import the Component 
+App.css and index.css - CSS works Globally 
+
+absolute path - public folder
+relative path - src/assets/images.jpg 
+
+
+
+
+CSS
+Image
+Component Adding - Same Page - Multipage 
+
+Rendering Methods:
+
+    Primitive
+    Non Primitive 
+        array
+        object 
+        object handling
+        array of object 
+
+Class Component - interface 
+                - Typescript         
+
+Conditional Rendering
+Optional Rendering
+nullish colescing 
+
+React router dom  - External Library 
+Browser router 
+routes 
+route 
+link (do not refresh the page )
+NavLink 
+Hooks 
+outlet 
+
+These are object it can convert it into expression then process the Methods 
+useNavigate()
+useparams() 
+useLocation() 
+
+        

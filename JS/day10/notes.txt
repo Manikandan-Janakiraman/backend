@@ -1,0 +1,25 @@
+.env 
+
+-> sensitive data store in .env file 
+-> For CRA REACT_APP_API_URL = http://localhost:3000
+-> For VITE_API = http://localhost:3000
+
+
+PORT No - 5000, 3000 (for Backend) 
+
+
+
+class APP extends Component {
+
+    render // without render it not works 
+    or we use constructor method
+    render(){
+        return(
+            <>
+    <div> class </div>
+            </>
+        )
+    }
+    
+}
+export default APP 

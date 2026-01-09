@@ -235,6 +235,65 @@ const g = gen();
 g.next();`,
         visualType: "iterator-visual"
     },
+    "Arrow Functions": {
+        title: "Arrow Functions",
+        definition: "Arrow functions provide a shorter syntax for writing function expressions.",
+        code: `// Traditional Function
+const sum = function(a, b) {
+  return a + b;
+};
+
+// Arrow Function
+const sumArrow = (a, b) => a + b;`,
+        visualType: "function-visual"
+    },
+    "Template Literals": {
+        title: "Template Literals",
+        definition: "Template literals allow for embedded expressions and multi-line strings.",
+        code: `const name = "John";
+const greeting = \`Hello, \${name}! 
+Welcome to our tutorial.\`;`,
+        visualType: "text-animation",
+        visualContent: "Dynamic Strings"
+    },
+    "Destructuring": {
+        title: "Destructuring",
+        definition: "Destructuring allows you to unpack values from arrays or properties from objects into distinct variables.",
+        code: `const person = { name: "Alice", age: 25 };
+const { name, age } = person;
+
+const colors = ["red", "green"];
+const [first, second] = colors;`,
+        visualType: "object-visual"
+    },
+    "Try/Catch": {
+        title: "Error Handling (Try/Catch)",
+        definition: "The try-catch statement handles blocks of code that may throw errors.",
+        code: `try {
+  nonExistentFunction();
+} catch (error) {
+  console.log("Error caught: " + error.message);
+} finally {
+  console.log("Execution finished.");
+}`,
+        visualType: "async-visual"
+    },
+    "Inheritance": {
+        title: "Classes & Inheritance",
+        definition: "Inheritance allows a class to inherit properties and methods from another class.",
+        code: `class Animal {
+  constructor(name) { this.name = name; }
+  speak() { console.log(\`\${this.name} makes a noise.\`); }
+}
+
+class Dog extends Animal {
+  speak() { console.log(\`\${this.name} barks.\`); }
+}
+
+const d = new Dog('Rex');
+d.speak(); // Rex barks.`,
+        visualType: "class-visual"
+    },
 
     // Default fallback
     "default": {
