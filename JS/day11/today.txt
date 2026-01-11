@@ -1,0 +1,41 @@
+Props:
+
+-> When you have the data on the component i want to parse another components with the same data of your parent component
+-> Parent component is a sender component and easily you can maitain but in child component does not change your value its immutable.
+-> Props only used in component 
+-> can parse array, object, array of object 
+-> variable cannot be parsed because dom needed 
+
+
+
+Const App = () => {
+    let a 10
+    return (
+        <>
+    Props{a}
+        </>
+    )
+}
+export default App 
+
+
+
+Method:
+
+
+Fallback:
+
+Default Props:
+
+
+
+Prop-types :
+Props library: 
+Validate the props 
+Props Types 
+
+Task: 
+    APP File
+        Register
+        Login
+        
