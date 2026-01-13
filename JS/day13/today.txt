@@ -1,0 +1,37 @@
+Router Dom
+
+Browser Router
+Routes
+Route 
+    link - Automatic url change without reload
+    navlink - 
+    anchor - Page reload
+    to
+    usenavigate
+
+
+
+Command:
+    npm i react-router-dom
+    npm i tailwindcss @tailwindcss/vite 
+    npm i react-icons  
+
+
+
+navlink:
+   -> return true or false 
+   -> highlight for which link isactivated return true, ispending return false
+   -> isActive return boolean value 
+   -> 
+
+   <NavLink> </NavLink>
+
+Outlet:
+    -> to show the child element 
+
+usenavigate:
+    -> 
+
+Enabling
+
+
