@@ -1,0 +1,63 @@
+UseLocation
+
+Browsert 
+router
+routes 
+
+React-router-dom 
+use location 
+    -> path file
+    -> conditional operation use
+    -> To receive the data 
+    -> To get the state data
+    -> Handle the state process 
+    -> without props we use to locate 
+    -> Get the current path by using this uselocation   ( /product)
+    -> Query Props 
+
+usenavigation 
+    -> To navigate from one page to another once the function completed.
+    -> Passing state using usenavigate
+
+
+
+useparams:
+    url location only point out. 
+
+State:
+    ->  primitive and non primite data for holding purpose 
+    ->  For screen visible
+    ->  state is an object
+    ->  handle only object related 
+
+UseState:
+
+ES6 Model:
+Object Enhancement
+    navicate ("/product", {state.productdata})
+
+
+
+
+Props and context:
+    For every page updates    
+
+
+new URLSearchParam - Constructor 
+    Query String
+
+
+Dynamic - Paramas
+Query string - Dynamic and static process 
+
+Hooks:
+    Special function to executes normal process or upgraded process for your component
+    Hooks always runs inside the component
+
+Declarative Process
+Asynchronous and Synchronous     
+
+List of Hooks    
+
+React State Management
+    Data MAnagement - state or usestate 
