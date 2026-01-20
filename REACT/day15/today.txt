@@ -1,0 +1,29 @@
+
+useNavigation:
+
+useParams()
+    -> get the dynamic value from url
+    -> take the values from the url parameter and used in components
+    -> product details, blog details page etc.,
+    -> In useLocation we use these in root process.
+    -> passes the id 
+
+Find return the object
+Filter return the array.
+Reduce return the single array value.
+map return the return a new arry.
+
+
+Create Phase:
+    npm node package manager  - upload in node software (VITE)
+    npx node package execute -  create as web bundle (CRA)
+
+
+React Router DOM 
+     
+Higher Order Component:     
+    -> HOC is a function its take the component and returns the new enhanced components. 
+    -> Always using the props
+
+
+    
