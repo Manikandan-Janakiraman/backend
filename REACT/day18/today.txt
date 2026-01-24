@@ -1,0 +1,87 @@
+State:
+    -> handle the data in the class component
+    -> changes hapen in the set state function 
+    -> The event is triggered the state is rerender the component and update the value on the screen
+
+
+useState:
+    -> Hook using in the functional component and state update function in the same place to allow in the functional component.
+    -> Hook is the state.
+    -> When you update the state using function with trigger the event.
+
+
+Form Handling 
+
+Single Form Handling:
+    ->
+    ->
+    ->
+
+
+Multiple form handling
+    ->
+    ->
+    ->
+
+    Before process the multiple form, we know how to update the object in useState 
+
+        Object:
+        let a = {name:"React"}
+        a.name = "Node"
+        console.log(a)
+
+
+Update the Object using State Process:
+const [title, setTitle] = useState({name:"Multi Form Handling});
+setTitle({...title, name:"Data Change})
+
+
+Array state:
+const [items, setItems] = useState(["Apple", "Banana", "Orange"]);
+
+Add:
+  const addItem = () => {
+    setItems([...items, "Mango"]);
+  };
+
+Update:
+    const updateItem = (index) => {
+    setItems(
+      items.map((item, i) =>
+        i === index ? "Updated Item" : item
+      )
+    );
+  };
+
+Remove
+ const removeItem = (index) => {
+    setItems(items.filter((_, i) => i !== index));
+  };
+
+Form:
+    -> Inputs handling is the form work
+    -> Like validation, value etc.
+
+
+name - attribute 
+Event - Onchange
+
+onSubmit - only form tag
+onChange - work in input tag
+onclick 
+
+localStorage.setItem("FormDataSave", StoreData)
+alert()
+
+In local storage object cannot be stored, so we use json stringify(storedata)
+
+State
+Object
+Local Storage
+toaster
+Sweeter (For Popup)
+
+npm i react-toastify 
+
+
+Dynamic Website 

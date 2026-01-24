@@ -1,0 +1,15 @@
+CRUD
+Create Read Update Delete
+
+
+Insert Array,
+Local Storage
+Read,
+Edit Button Id - 
+    Local Storage and ID Button Match then Push the value
+Delete Button Id
+    Local Storage and ID Button doesn't match pop the value
+
+REgister
+Login
+Dashboard

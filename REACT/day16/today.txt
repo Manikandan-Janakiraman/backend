@@ -1,0 +1,49 @@
+Interview Questions:
+
+What is HOC?
+    Hoc is a function. It takes component as a input  - give the return new enhance component.
+
+HOC Syntax:
+
+    const withText = (WrappedComponent) =>(props)=>{
+
+        return <WrappedComponent {...props} />
+    }
+
+    export default withText;
+
+    Explanation:
+        props & WrappedComponent - Parameter
+        {...props} - Container (all data stored in the container)
+
+
+
+Example Program:
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Interview Questions:
+Method of HOC:
+FORM Handling
+Usestate
+Product show
+javascript concepts

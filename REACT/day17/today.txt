@@ -1,0 +1,51 @@
+State:
+    -> Re render 
+    -> 
+
+Form Handling
+
+    Single Value:
+        -> 
+
+
+
+    Multi Value:
+        -> 
+
+Two Methods:
+    -> Onchange() Event
+    -> Onsubmit()
+    -> onClick() 
+
+Project Structure:
+File -> Function Components -> Single -> State -> UI - Input -> Event -> Function -> SetState
+
+const App = () =>{
+
+    const [form, setForm] = useState("")
+    const handleChange = (e)=>{
+        const data = e.target.value
+        //setForm(data)
+
+        if(data>18){
+            setForm(data)
+        }else{
+            setForm("Not Eligible")
+        }
+    }
+
+    return(
+        <>
+        <div>
+        <h1Form Handling</h1>
+        <input tags>
+
+        <input onChange = {handleChange} />
+        </div>
+        </>
+
+    )
+}
+
+
+
