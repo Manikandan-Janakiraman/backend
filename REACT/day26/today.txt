@@ -1,0 +1,39 @@
+flex-wrap = each row contains 4 products
+
+useMemo
+ -> Calculate value
+ -> Always return the value 
+ -> Not return the functions
+ 
+
+ Syntax:
+ const datas = useMemo(()=>{
+
+ },[])
+
+
+
+ useEffect 
+ -> Not return anything
+ -> you cannot save the useEffect data
+
+ const datas = useEffect(()=>{
+
+ },[])
+
+
+usecallback:
+-> REturn the functions in this usecallback
+-> usecallback memo function reference and recreate only dependency changes
+
+const datanew=()=>{
+
+}
+return datanew
+
+
+useReduce:
+
+useEffect:
+
+uselayouteffect:
