@@ -1,0 +1,32 @@
+Lazy Loading
+
+-> Loading a component only its needed not at the initial page load.
+-> In large app build with react, if we load all components at once, 
+    the bundle became heavy and the app becomes slow.
+-> Lazy loading split the bundle and loads parts on demand.
+->  Improves performance, speed, user experience.
+
+
+lazy()
+suspense - fallback 
+            the expected component not loading we have to use fallback to view its loading 
+
+Syntax:
+
+const name = lazy(()=>import(path)) 
+
+
+
+Example:
+
+const login = lazy(()=>import("./components/Login))
+
+
+<Suspense fallback={<h1>Loading...</h1>}
+    <Login />
+</Suspense>
+
+
+
+
+
