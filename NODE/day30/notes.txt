@@ -1,0 +1,75 @@
+2. What is HTTP module? Why do we use it?
+
+The HTTP module is a built-in Node.js module used to:
+
+Create web servers
+
+Handle requests and responses
+
+Build APIs
+
+Serve web pages
+
+Example:
+
+const http = require("http");
+
+Why we use it:
+
+To communicate between client and server
+
+To build backend applications
+
+To handle HTTP requests
+
+3. What are import and export methods?
+
+Import/export is used to share code between files.
+
+Instead of writing everything in one file, we split code into modules.
+
+There are two systems in Node:
+
+CommonJS
+require()
+module.exports
+ES Modules
+import
+export
+
+Modern Node mostly uses ES Modules.
+
+5. What is machine and runtime environment in Node?
+
+Machine (in Node.js)
+
+A machine is the physical computer or system where Node.js runs.
+
+It includes:
+
+CPU
+
+Memory (RAM)
+
+Operating System (Windows / Linux / Mac)
+
+Example:
+Your laptop running Node.js is the machine.
+
+Runtime Environment (in Node.js)
+
+A runtime environment is the software layer that executes JavaScript code.
+
+In Node.js, the runtime environment is Node itself.
+
+Node.js provides:
+
+V8 engine → runs JavaScript
+
+File system access
+
+Network access
+
+HTTP server capability
+
+So JavaScript can run outside the browser.
