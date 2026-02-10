@@ -1,0 +1,126 @@
+useID :
+-> Automatic Unique ID useID is a generate react hook, stayable identifier for elements inside the component.
+-> Mainly designed for accessibility purpose especially to correctly connect form elements like label and inputs.
+-> When reusable components render multiple times.
+-> Category, post, product
+
+
+ 
+
+UseTRansition :
+-> It is a react hook that allows developers to marks certain state update as non urgent.
+-> This is means react will prioritize to update work
+
+
+useDeferredvalue:
+-> react hook, used to delay updating a value until a browser is free from more urgent work.
+-> search, filter, rendering, fast interaction for ui 
+
+
+useImperativeHandle:
+-> That allows a child component to customize what is exposed to the parent, when a ref i used.
+-> Parent accessing a child throught ref.
+
+
+htmlFor:
+ID: focusing the input box 
+
+
+useIdExample
+useInsertionEffect
+useLayoutEffect
+
+Debouncing & Throttling:
+
+JS:
+    -> JS
+    -> Compiler
+    -> Where its run
+    -> show the value
+    -> data type, variable 
+    -> operators
+    -> Conditional(If else), control statements (Loops)
+    -> Hoisting, closure, function, trithy value, bugs, NAN, undefined, reference error.
+    -> Array, array of objects, function(callback, closoure, return, recursion), Object (Access)
+    -> ES6+ handling 
+    -> DOM (Array methods, access, value (selectors), events(onclick, onchange, onsubmit), DOM Properties(Innertext, innerhtml))
+    -> Form handling (array, object how to show)
+        -> Local storage, session storage 
+    -> Asynchronous process (Backend) (Node and Express)
+
+REACT: 
+    -> Project set 
+    -> difference between js and react 
+    -> VITE vs CRA 
+    -> NPM, npx 
+    -> node modules 
+    -> component creation (closoure function)
+    -> CSS, tailwindcss
+    -> react router dom, link, route 
+    -> use hooks concepts 
+        useContext, useEffect, useState
+        useMemo(value only return), useCallback(function pass), useParams 
+        useID, useDeferredvalue, useImperativeHandle, useDeferredvalue, useReducer
+    -> conditional, optional rendering 
+
+    -> Redux 
+    -> Projects 
+
+Real Data handle so we use Node.js 
+
+Node:
+    -> Node js javascript Runtime environment (file path or location, path, code, logics)
+    -> Used For Outside purpose or browser 
+    -> Mainly for building a Server Side Function 
+    -> Designed to built fast, scalable, event driven, non blocking io application
+    -> Uses a Single threaded event look architecture which makes it light weight and efficient for handling multiple client request without creating multithreads.
+    -> chrome v8 used to run developer outside function
+    -> Used for webapi and servers 
+    
+
+Blocking IO:
+    -> When one request is processing, then next request must wait until it finished. 
+    
+Non blocking IO:
+    -> Does not wait it registered the task and move to the next request. 
+    -> when the task is finished the callback handle the request. 
+
+NODE Topics:
+    Express Framework
+    Server Setting (File System)
+    To listen the request 
+    PORT (Front end Address) (Domain or local port) 3000, 5000
+    Server, Port, Route System(Way to transfer data), Middleware(request - response), Controller (Handler) Request, Response, JSON
+
+    Core node built in node modules 
+
+
+HTTP - Set the server 
+File System  - FS
+path System - Path 
+OS System - OS 
+
+Process - Core built in function, access the env file 
+
+crypto, events
+
+
+Type of Node Modules
+    -> Built in modules (Come with node)
+    -> user defined modules (We build)
+    -> third party modules - express, dotenv, Cross-Origin Resource Sharing (CORS),mongoose, bcrypt, jsonwebtokens, multer (image oriented)
+
+
+
+Express - To efficient 
+
+MongoDB ORM - Function (Optional Relational Mapping)
+
+URL - uniform resource locator 
+HTTP - Hyer text transfer protocol 
+API - application Programming interface 
+
+REST Apis - GET, POST, PUT, PATCH, DELETE
+
+Fetch - get data and give data (Dont have methods), Json parse 
+axios - Automatic data conversion using get, post, put, patch 
