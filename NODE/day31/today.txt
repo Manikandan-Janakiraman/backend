@@ -1,0 +1,127 @@
+File System (FS)
+    -> The FS Module in node js allow the backend to interact directly 
+       with the operating system file.
+    -> Used to create, read, update, delete (CRUD) and manage files, directories
+    -> Node can access system level resources, it makes fs a powerful backend tool it works synchronous and asynchronous
+    -> Asynchronous suitable for scalability purpose
+
+node filesystems.js
+    appendFilesync
+    appendFile
+    mkdir 
+    readdir 
+    read 
+    writeFile
+    rmdir 
+
+import fs from 'fs'
+console.log(fs);
+
+
+// Create File
+// fs.writeFile(fileName, data, callbackFunc) 
+
+fs.writeFile("create.txt","This is a New file to handle the New error",(err)=>{
+    if(err){
+        console.log("File Created failed");
+        return
+    }
+    console.log("File Created Successfully done");
+})
+
+
+
+
+// Read 
+// fs.readFile(fileName, Encoding, callbackFunc) 
+
+
+Example:
+    fs.readFle("create.txt",(err, data)=>{
+
+        console.log("File Failed")
+    }
+    console.log("Data");
+    )
+
+HAsh key values (binary Numbers)
+
+Unicode Transformation Format 
+
+
+// Update 
+// fs.appendFile(fileName, data, callbackFunc) 
+
+
+              fs.appendFile("create.txt","n/add new values",(err)=>{
+                       
+                } console.log();
+                
+                )
+
+
+
+
+// Delete 
+// fs.unlink(fileName, callbackFunc) 
+
+
+            fs.unlink("create.txt",()=>{
+
+            })
+
+
+
+path:
+    -> The path module helps in handling and transforming file and directories paths safely.
+    -> absolute path, relative path
+    -> across the different operating systems windows, linux, ubuntu use different path format 
+    -> Path ensure compatibility it provides utility to join the paths, resolve absolute paths, 
+       manage the extensions, it prevent hard core file location.
+
+    import path from 'path' 
+    console.log(path) 
+
+    // Join
+    // path.join(path1, path2,...)
+
+    // absolute path (from the root directories)
+    // path.resolve(path)
+
+    // Take the file extensions
+    // path.extname(filename)
+
+    // Take the Filename 
+    // path.basename(filename) 
+
+
+    const foldername = "upload/newdata"
+    const fileName = "server.js" 
+    const filePath = path.join(foldername, filename)
+    console.log(filePath)
+
+
+const absolutePath = path.resolve("")
+const absoluteRelativePath = path.relative()
+
+
+
+OS Module
+    -> The OS Module provide the information where the js is running
+    -> it helps retrive cpu architecture, platfirm obtain and host name 
+    -> System monitoring tools and backend diagnoses 
+    -> does not provide of it only read the information
+
+
+import os from 'os'     
+
+const platform = os.platform()
+console.log("platform", platform);
+const archi = os.arch();
+console.log("archi", archi);
+
+
+Process:
+
+.env:
+environment variable string 
