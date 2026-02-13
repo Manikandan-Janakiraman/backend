@@ -1,0 +1,226 @@
+2. Difference between Node and Express
+
+Node.js
+
+A runtime environment that lets you run JavaScript outside the browser.
+
+Used to build servers and backend applications.
+
+
+Example:
+
+console.log("Server running");
+
+Express.js
+
+A framework built on Node.js.
+
+Makes building servers and APIs easier.
+
+
+👉 In short:
+
+Node = engine
+
+Express = toolkit to build faster
+
+
+
+---
+
+3. What is .env?
+
+A .env file stores environment variables (secret or configurable values).
+
+Example:
+
+PORT=5000
+DB_PASSWORD=abc123
+
+Why use it?
+
+Keeps sensitive data safe
+
+Avoids hardcoding values in code
+
+
+
+---
+
+4. What is listen()?
+
+listen() starts the server and tells it to wait for requests.
+
+Example:
+
+app.listen(5000, () => {
+  console.log("Server running");
+});
+
+Meaning:
+
+> “Start the server on port 5000.”
+
+
+
+
+---
+
+5. What is Express?
+
+Express is a Node.js framework used to create servers and APIs easily.
+
+Example:
+
+const express = require("express");
+const app = express();
+
+
+---
+
+6. Why do we use Express?
+
+Because it makes backend development easier.
+
+Without Express:
+
+More code
+
+Hard routing
+
+Manual handling
+
+
+With Express:
+
+Simple routing
+
+Middleware support
+
+API creation is easy
+
+
+
+---
+
+7. What is nodemon?
+
+nodemon automatically restarts the server when you save changes.
+
+Install:
+
+npm install -g nodemon
+
+Run:
+
+nodemon app.js
+
+No need to restart server manually.
+
+
+---
+
+8. What is port number and localhost?
+
+Port number
+
+A communication endpoint for a server.
+
+Example: 5000, 3000
+
+
+localhost
+
+Refers to your own computer.
+
+
+Example:
+
+http://localhost:5000
+
+Meaning:
+
+> Server running on your machine at port 5000.
+
+
+
+
+---
+
+9. What is API?
+
+API = Application Programming Interface
+
+It allows frontend and backend to communicate.
+
+Example:
+
+app.get("/users", (req, res) => {
+  res.send("User data");
+});
+
+
+---
+
+10. Flow of Express + Frontend
+
+The flow looks like this:
+
+User → Frontend → API request → Express server → Database
+                        ↓
+                     Response
+                        ↓
+                     Frontend UI
+
+Example flow:
+
+1. User clicks button
+
+
+2. Frontend sends request (fetch/axios)
+
+
+3. Express receives request
+
+
+4. Server processes data
+
+
+5. Response sent back
+
+
+6. UI updates
+
+
+
+
+---
+
+11. What is package.json?
+
+package.json is the project configuration file.
+
+It contains:
+
+project name
+
+dependencies
+
+scripts
+
+version
+
+
+Example:
+
+{
+  "name": "myapp",
+  "version": "1.0.0",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
+
+Created using:
+
+npm init -y

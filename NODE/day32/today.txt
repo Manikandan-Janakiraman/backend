@@ -1,0 +1,132 @@
+Web Development:
+
+Normal Core JS + HTML - PHP 
+Libraries -> React, jquery
+Framework -> angular, nextjs
+Backend is express framework 
+    MVCs - Model View Controller Services
+
+Express:
+    -> inversion of control(IOC) framework control the process     
+    -> express js is minimal and flexible web framework, build on top of node js 
+    -> USed to build an web application and rest apis 
+    -> It provides routing middleware support and request, response handling in a simple and structure way.
+
+Why Express:
+    -> Node only using for small application, but it come become large application complex
+    -> express simplify the server by giving building methods and middleware handling 
+
+How it Works:
+
+Front End: 
+    -> HTTP Master (to send or receive link by using this http format)
+    Request(data send or receive) -> 
+    Body, Params, query, headers -> 
+    POST, GET, PUT, PATCH, DELETE -> 
+    response (json, text, html render (status code)) 
+    Server(Local(5000, 3000), Online) -> 
+    Route (API) -> 
+    Controller(js core, mongodb(ORM) or sql) ->  DB Connection 
+    
+    
+    Config
+    Controller
+    Middleware 
+    Model
+    Route 
+
+
+
+    Pattern: HOST -> Online -> Localhost 5173
+
+CRUD -> Create, Read, Update, Delete     
+
+Install Express 
+nodemon -> 
+.env -> Environment Variable (Sensitivity Data) Do not push this env file into github or third party server, it has confidential information
+        git ignorance 
+
+
+Installation Commands:
+
+    npm init -y   -> Server set (package.json) 
+      Explanation:
+      -y -> yes meaning 
+
+    npm init  -> all detail information given by the user 
+
+    npm i express nodemon --save-dev dotenv
+
+    nodemon -> Automatic restart your server 
+
+    --save-dev -> only for Development purpose 
+
+    dotenv -> Environment variable file 
+
+    package-lock.json -> Testing purpose 
+
+    node-module -> Backend Libraries 
+
+    for file creation: 
+    echo .> server.js
+    server.js or index.js 
+
+    cls -> clear 
+
+
+Folder structure:
+
+    node_modules
+    .env
+    .gitignore
+    package-lock.json 
+    package.json
+    server.js 
+
+
+front end -> copy the gitignore file and paste it into Backend folder structure
+
+package.json -> 
+    "type":"module"
+    "main":"server.js"
+    "start":"node server.js"
+    "dev":"nodemon server.js"
+
+.env ->
+    PORT=5000 
+
+.gitignore ->
+    .env     
+
+Server.js 
+    import express from 'express'
+
+    console.log(express);
+
+To run the process 
+    -> npm run dev 
+
+Normal Run:
+    -> node server.js     
+
+
+
+First we have convert the express into expression format 
+    import express from 'express'
+    import dotenv from 'dotenv'
+
+    const app = express() // expression format 
+    
+    dotenv.config()
+    
+    const PORT = process.env.PORT || 3000   // OR (||) operator using 
+
+    app.listen(PORT, ()=>{
+        console.log(`Server Connected successfully http://localhost:${PORT}`)
+    }) 
+       
+       
+       
+Explanation:
+        listen -> 2 parameter pass 
+
