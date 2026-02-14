@@ -1,0 +1,76 @@
+2. What is request object 
+
+	The request object contains all information sent from the client (frontend / Postman / browser) to the server.
+	
+	It includes:
+	Body data, URL parameters, Query values, Headers, Method type (GET, POST), URL path, IP address
+
+
+3. what is the use of body data's when we use?
+
+	Body data = Data sent inside request body
+
+	Used mostly in: POST, PUT, PATCH
+
+	When to use body?
+	✔ When sending form data
+	✔ When creating new user
+	✔ When updating user
+	✔ When sending large data
+
+
+4. what is the use of  headers data's when we use?
+
+	Common headers:
+
+	Content-Type
+	Authorization
+	Token
+	Language
+
+	✅ When to use headers?
+
+	✔ Sending JWT token
+	✔ Authentication
+	✔ API key validation
+	✔ Content type checking
+
+
+5. what is the use of  params data's when we use?
+
+	Params are values inside the URL path.
+
+	When to use params?
+	✔ Fetch user by ID
+	✔ Delete user by ID
+	✔ Update user by ID
+	✔ Specific resource selection
+
+
+
+6. what is the use of  query data's when we use?
+
+	Query data comes after ? in URL.
+	
+	When to use query?
+
+	✔ Filtering
+	✔ Searching
+	✔ Pagination
+	✔ Sorting
+
+
+7. what is request object when we use?
+
+
+	The request object (req) is used in every API.
+	
+	We use req to:
+	Read body data
+	Read params
+	Read query
+	Read headers
+	Check request method
+	Check URL
+
+
