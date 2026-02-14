@@ -1,0 +1,134 @@
+Okay — I’ll explain each one **simply and clearly**, one by one.
+
+---
+
+## 1. What is API?
+
+**API = Application Programming Interface**
+
+An API is a **bridge between two software programs** so they can talk to each other.
+
+Example:
+
+* Your **frontend (React)** sends a request
+* Your **backend (Node/Express)** sends data back
+
+Example API:
+
+```
+http://localhost:5000/users
+```
+
+Frontend asks → Backend responds with data (usually JSON).
+
+Think of API like:
+
+> A **waiter in a restaurant** — takes your order and brings food.
+
+---
+
+## 2. What is Route Handling?
+
+Route handling means:
+
+> **What should happen when a user visits a specific URL.**
+
+Example:
+
+```js
+app.get('/home', (req, res) => {
+  res.send("Welcome Home")
+})
+```
+
+Here:
+
+* `/home` = route
+* function = handler
+
+So when user visits `/home`, server sends **"Welcome Home"**.
+
+---
+
+## 3. What is Route Mounting?
+
+Route mounting means:
+
+> **Connecting route files to the main server using `app.use()`**
+
+Example:
+
+**authRoutes.js**
+
+```js
+router.get('/login', handler)
+```
+
+**server.js**
+
+```js
+app.use('/api', authRoutes)
+```
+
+Final route becomes:
+
+```
+/api/login
+```
+
+So mounting = **attaching routes to the app**.
+
+---
+
+## 4. What is CORS?
+
+**CORS = Cross-Origin Resource Sharing**
+
+It allows **frontend and backend running on different ports or domains to communicate**.
+
+Example:
+
+* React → `localhost:3000`
+* Node → `localhost:5000`
+
+Without CORS → blocked by browser
+With CORS → allowed
+
+Example:
+
+```js
+import cors from 'cors'
+app.use(cors())
+```
+
+---
+
+## 5. What is JSON parse?
+
+You typed **json pharse**, but correct term is **JSON.parse()**.
+
+`JSON.parse()` converts:
+
+> **JSON string → JavaScript object**
+
+Example:
+
+```js
+const data = '{"name":"Dhana"}'
+const obj = JSON.parse(data)
+
+console.log(obj.name)
+```
+
+Output:
+
+```
+Dhana
+```
+
+Reverse method:
+
+```
+JSON.stringify()
+```
+
