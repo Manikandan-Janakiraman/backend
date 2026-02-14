@@ -1,8 +1,8 @@
-export const createUser = (req,res)=>{
+export const createUser = (req, res) => {
 
 
-console.log(req.body);
+    console.log(req.body);
 
-const {name} =req.body
+    const { name, age } = req.body
 
 }
