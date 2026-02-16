@@ -1,0 +1,65 @@
+What is Response Object in Express?
+
+-> Res is an object provide by express
+-> Http response sent back to client
+->set status code
+-> set headers
+-> End request response cycle
+
+Example:
+
+app.get("/"(req, res)=>{
+res.send("HelloWorld);
+});
+
+Different Methods Available in Response Object
+res.send()
+res.json()
+res.status()
+res.redirect()
+res.set()
+res.sendFile()
+
+
+res Made Available:
+
+-> Express automatically provides two object
+   inside route handlers
+
+   req - request object
+   res - response object
+   
+Both pass them in route function.
+
+
+What Kind of Data Can Be Sent Using Response Object?
+
+res.send("Hello") --- Text
+res.json({name:"Mani"}) ----- Json
+res.send("<h1>Hello</h1>");    ---- HTML
+res.sendFile("index.html"); --- File
+res.status(200).send("created"); ---- status, Message
+
+
+Use of Status Code:
+
+Successful
+Failed
+Unauthorized
+Not found
+server error
+
+
+Status Code:
+-> 3 digit number sent by server indicate result
+of a request
+
+200 -> OK
+201 -> created
+404 -> not found
+500 -> Internal error
+400 - >bad request
+401 -> unauthorized
+403 ->Forbidden
+
+
