@@ -1,0 +1,73 @@
+Sql --> Structured Query Language
+
+Relational Database Management System RDBMS 
+
+Row and Columns
+    Multiple table -> Row and Columns
+
+
+INSERT, UPDATE, DELETE, FETCH Where desc asce
+XAMPP Server, Mysql, Wamp Server, Oracle 
+
+Nosql -> Will inser data in object based. 
+
+BSon 
+    -> Binary Javascript Object Notation.
+    -> Binary encoded serialization format 
+    -> Primary by mongo db to store docments and make remote procedure calls
+    -> faster parsing
+    -> efficient storage
+    -> Extended data types such as data and bin data 
+
+JSON
+
+MongoDB
+    -> Mongo means large kind of data to handle called mongo. 
+    -> No sql Database that stores data in json like documents instead of tables and rows 
+    -> Structures can change dynamically without strict table design.
+    -> That stores data Inside collection
+    -> Collection of documents have unique id. 
+    -> Document oriented it means naturally with Javascript objects .
+
+ORM Method:
+    -> Object Relational Mapping in sql orm map tables to object.
+    -> In mongoose acts as an odm object docment mapper.
+    -> Define schema , interact with mongo db, use Javascript Methods. 
+    -> mongoose library is an odm library that provides schema base modelling. (Model will pass the datas)
+    -> 
+
+
+DB connections 
+
+
+MongoDB 
+Online:
+
+
+    Connection Cluster Popup:
+        Username:
+        Password:
+        Driver Link for Online:
+
+        Compass Link for Offline:
+
+Mongo DB Community Server Install
+Mongo DB Compass Install 
+
+
+try{
+    const conn = await mongoose.connect(process.env.MONGO_URL)
+}catch(error){
+    console.log("error")
+}
+
+
+
+
+
+Connect to cluster: 
+Server 
+mongodb+srv://manij472_db_user:<db_password>@cluster0.ofyb49k.mongodb.net/?appName=Cluster0
+
+
+Offline: Compass used for offline purpose 
