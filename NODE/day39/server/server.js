@@ -14,7 +14,7 @@ app.use(cors())
 
 app.use(express.json())
 
-app.post("/api/user", creation)
+app.use("/api", creation)
 
 const PORT = process.env.PORT || 5000
 

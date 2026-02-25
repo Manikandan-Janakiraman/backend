@@ -3,9 +3,9 @@ import { addition } from '../controllers/controller.js'
 
 const router = express.Router()
 
-router.post("/data", addition)
+router.post("/user", addition)
 
 export default router;
 
 
-//http://localhost:5000/api/user/data
+//http://localhost:5000/api/user/
