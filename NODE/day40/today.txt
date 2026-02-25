@@ -1,0 +1,29 @@
+bcrypt:
+    -> Password hashing library used to securely store user Passwords in applications instead of saving the actual password in the database.
+    -> bcrypt converts into a hashed format using a cryptographic algorithm.
+    -> This ensures that event database is compromise attackers cannot retrieve the original Passwords
+    -> Specially designed for password hashing and including building protection mechanism like salting and computation cost factors 
+    -> A salting is a random values added to the password before hashing 
+    -> Salt rounds 
+
+Built in function:
+    -> bcrypt is an object 
+    -> Hash function - bcrypt.hash(p, sr)
+            Used to converts plain passwords into a hashed version     
+    -> 1 parametes - password, 2nd parametes - salting (rounds)   
+    -> bcrypt.campare() 
+            used during login to compare entered password and stored password to compare 
+            hashed password, raw password user typing it returns boolean value only (true, false)
+
+    -> In javascript every values has return the boolean value                           
+
+Salt Rounds:
+    Cost factors
+    Higher number     
+
+
+Process:
+    Topic with definition
+    Syntax
+    Program
+    Output    
