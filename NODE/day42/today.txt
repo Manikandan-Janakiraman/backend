@@ -1,0 +1,65 @@
+JWT ---> Stateless authentication mechanism, digitally signed token 
+JWT --->  JSON Web Tokens
+
+It is compact self contained and secured way to tansmit information between two parties as a 
+json objects.
+
+The information  inside the token is digitally signed which means it cannot be modified without 
+inviting the signature.
+
+JWT widely used in authentication system to maintain user session securely in modern web application
+
+A JWT token consists of three parts of separated by dots.
+
+    Header -> Contains information about the signing algorithm 
+    Payload - > User related data like user id or role, Data parse from here 
+    Signature -> ensures the token has not tampered or not.
+
+    -> These structure makes jwt secured and light weight.
+    -> Server does not store session data in memory or database.
+    -> Once the token generated and sent to the client.    
+    -> A client send it back with every request.
+    -> A server verifies each time 
+    -> JWT is commonly used in REST API where front end and backend is separated 
+
+
+Authentication:
+    Who the user
+    To validate the user     
+    To check the user 
+    To verify the user.
+
+Authorization:
+    Accessing the directory or files permission to give Admin, User 
+    Authorization verify the identity
+
+Installing Packages:
+    npm i jsonwebtoken 
+
+Packages:    
+    npm i express nodemon dotenv cors mongoose jsonwebtoken bcrypt multer 
+        mailverification    
+        payment gateway 
+
+
+JWT Process: 
+    Sign -> Generate the token 
+        Parameters (payload, secret key, options) 
+
+    Verify Function:
+        Already Generate tokens and secret key         
+
+
+
+Hash -> compare, Hash
+
+
+Token Generation:
+
+const jwt_token = jwt.sign(
+    {id:checkEmail_id, name:checkEmail.name},
+    {JWT_token:process.env.JWT_SECRET_KEY }
+    {expiresIn:"3hr"}
+)
+res.status(200).json({msg:"Login Success",token:jwt_token})
+
