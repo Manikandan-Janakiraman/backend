@@ -1,0 +1,13 @@
+Middleware:
+    -> Middleware in express is a function that runs during the request and response cycle
+       before the final route handler executes.
+    -> It has access to 3 important objects request, response, next 
+    -> Middleware can modified the request objects send a response or parse control to the next function using the next function.
+    -> Sometimes Middleware acts like a check point systems before a request reach to the controller.
+    -> Middleware can validate the data.
+    -> Check the authentication
+    -> Handling the errors or transform the data.
+    -> It ensure that only valid and authorised request proceed from the controller.
+    
+
+    
