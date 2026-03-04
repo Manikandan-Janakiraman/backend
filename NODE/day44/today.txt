@@ -1,0 +1,33 @@
+Front End:
+
+axios
+react-router-dom
+
+    src
+        components
+            Navbar.jsx
+        pages
+            login.jsx
+            register.jsx 
+            dashboard.jsx
+        App.jsx
+
+Backend:
+    config
+        db.js 
+    controllers
+        authController.js 
+    models
+        authModel.js 
+    routes
+        authRoute.js 
+    middleware
+        authmiddleware.js 
+
+    node_modules 
+    .env
+    server.js
+    .gitignore
+    package-lock.json
+    package.json 
+
