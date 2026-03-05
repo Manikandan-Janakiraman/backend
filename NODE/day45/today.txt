@@ -1,0 +1,42 @@
+Multer
+Image, PDF - uploading process  
+
+
+Middleware: 
+const storage = multer.diskStorage({
+
+    destination: function (req,file, callback){
+           callback(null, "uploads)           --> uploads - callback injection
+    },
+    filename: function(req, file, callback){
+            const uniquename = Date.now() + "-" + file.originalname;
+            cb(null, uniquename) 
+    }
+
+    
+
+})
+
+export const upload = multer({storage}) 
+
+
+Controller:
+export const imageAdding = async(req,res)=>{
+    console.log(req)
+    try{
+ const addingdata = await imageuploadmodel.create({
+        name:req.body.name,
+        image:req.file.path
+    })
+    res.status(201).json({msg:"File Added Successfully})
+    }
+   catch(error){
+    console.log(error, error)
+   }
+}
+
+
+
+Routes:
+route.post("/uploaddata", upload.single("image), imageAdding) 
+
