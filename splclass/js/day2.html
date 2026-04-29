@@ -1,0 +1,212 @@
+<html>
+
+<body>
+
+
+
+    <script>
+        let a = 4;
+        if (a % 2 === 0) {
+            console.log("a is even Number");
+        } else {
+            console.log("a is odd Number");
+        }
+    </script>
+
+    <script>
+        let b = -5;
+        if (b > 0) {
+            console.log("Positive");
+
+        } else if (b < 0) {
+            console.log("Negative");
+
+        } else {
+            console.log("Zero");
+
+        }
+    </script>
+
+
+    <script>
+
+        let c = 25;
+        let d = 30;
+        if (c > d) {
+            console.log("c is greater than d");
+
+        } else if (c < d) {
+            console.log("c is lesser than d");
+
+        } else {
+            console.log("Both are equal");
+
+        }
+
+    </script>
+
+    <script>
+        let age = 22;
+        if (age >= 18) {
+            console.log("Eligible Voter");
+        } else {
+            console.log("Not Eligible to vote");
+        }
+
+    </script>
+
+    <script>
+        let value1 = 25;
+        let value2 = 25;
+        console.log(value1 + value2);
+        console.log(value1 - value2);
+        console.log(value1 * value2);
+        console.log(value1 / value2);
+    </script>
+
+
+    <script>
+        if (0) {
+            console.log("Yes")
+        } else {
+            console.log("No")
+        }
+        // No 
+    </script>
+
+    <script>
+
+        if ("") {
+            console.log("A")
+        } else {
+            console.log("B")
+        }
+        // B
+    </script>
+
+    <script>
+        if (0) {
+            console.log("True");
+
+        } else {
+            console.log("False");
+        }
+
+        // False
+    </script>
+
+
+    <script>
+        if (undefined) { console.log("A") } else { console.log("B") }
+        // B
+    </script>
+
+
+    <script>
+        if (NaN) { console.log("Yes") } else { console.log("No") }
+        // No
+    </script>
+
+    <script>
+        if ([]) {
+            console.log("Array")
+        } else {
+            console.log("Empty")
+        }
+        // Array
+    </script>
+
+    <script>
+        if ({}) {
+            console.log("Object")
+        } else {
+            console.log("Nothing")
+        }
+        // Object
+    </script>
+
+
+
+    <script>
+        if (false || "hello") { console.log("Yes") } else { console.log("No") }
+
+        // Yes
+    </script>
+
+    <script>
+        if (true && 0) { console.log("A") } else { console.log("B") }
+
+        //B
+    </script>
+
+
+
+    <p> Which is falsy? → null</p>
+    <p> Which is truthy? → "false"</p>
+    <p> Which contains only falsy values? → A. 0, "", null, undefined, NaN</p>
+
+
+
+
+
+    <script>
+
+        //Print numbers from 1 to 10 using a for loop.
+
+        for (let i = 1; i < 10; i++) {
+            console.log("Print Values");
+        }
+    </script>
+
+    <script>
+        // Print all even numbers from 1 to 20
+
+        for (let i = 1; i <= 20; i++) {
+            if (i % 2 === 0) {
+                console.log("Even Numbers");
+            }
+        }
+
+    </script>
+
+    <script>
+        function sumToN(n) {
+            let sum = 0;
+
+            for (let i = 1; i <= n; i++) {
+                sum += i;
+            }
+
+            return sum;
+        }
+
+        console.log(sumToN(5)); 
+    </script>
+
+    <script>
+        function printTable(num) {
+            for (let i = 1; i <= 10; i++) {
+                console.log(`${num} x ${i} = ${num * i}`);
+            }
+        }
+
+        printTable(5);
+    </script>
+
+
+    <script>
+        let r = 300;
+        let s = 220;
+        let p = 121;
+
+        if (r >= s && r >= p) {
+            console.log("R is Bigger");
+        } else if (s >= r && s >= p) {
+            console.log("S is Bigger");
+        } else {
+            console.log("P is Bigger");
+        }
+    </script>
+</body>
+
+</html>
