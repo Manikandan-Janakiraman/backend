@@ -1,0 +1,43 @@
+<html>
+
+<body>
+
+    <script>
+        function isPalindrome(num) {
+            const str = num.toString();
+            const reversed = str.split('').reverse().join('');
+            return str === reversed;
+        }
+
+        // Examples
+        console.log(isPalindrome(121)); // true
+        console.log(isPalindrome(123)); // false
+    </script>
+
+    <script>
+        for (let i = 1; i <= 100; i++) {
+            if (i % 15 === 0) {
+                console.log("FizzBuzz");
+            } else if (i % 3 === 0) {
+                console.log("Fizz");
+            } else if (i % 5 === 0) {
+                console.log("Buzz");
+            } else {
+                console.log(i);
+            }
+        }
+    </script>
+
+    <script>
+        function isPalindrome(str) {
+            return str === str.split('').reverse().join('');
+        }
+
+        // Example
+        console.log(isPalindrome('hello'));   // false
+        console.log(isPalindrome('racecar')); // true
+        
+    </script>
+</body>
+
+</html>
